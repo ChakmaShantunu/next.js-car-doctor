@@ -1,9 +1,10 @@
 import Image from "next/image";
+import ServicesSection from "./components/ServicesSection";
 
 export default function Home() {
   return (
     <div>
-      <h1 className="text-5xl text-center">hello boss</h1>
+      <ServicesSection></ServicesSection>
     </div>
   );
 }

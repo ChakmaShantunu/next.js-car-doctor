@@ -14,11 +14,11 @@ export default function Navbar() {
     // }
 
     const links = <>
-        <li><a>Item 1</a></li>
-        <li><a>Item 3</a></li>
-        <li><a>Item 3</a></li>
-        <li><a>Item 3</a></li>
-        <li><a>Item 3</a></li>
+        <li><Link href={"/"}>Home</Link></li>
+        <li><Link href={"/about"}>About</Link></li>
+        <li><Link href={"/services"}>Services</Link></li>
+        <li><Link href={"/blog"}>Blog</Link></li>
+        <li><Link href={"/contact"}>Contact</Link></li>
     </>
     return (
         <div className="navbar bg-base-100 shadow-sm">
@@ -33,7 +33,7 @@ export default function Navbar() {
                         {links}
                     </ul>
                 </div>
-                <Link href={'/'}><Image src={'/assets/logo.svg'} width={107} height={87}></Image></Link>
+                <Link href={'/'}><Image src={'/assets/logo.svg'} alt='logo' width={107} height={87}></Image></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -41,7 +41,7 @@ export default function Navbar() {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+                <a className="btn btn-outline">Appointment</a>
             </div>
         </div>
     )
