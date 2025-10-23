@@ -1,5 +1,6 @@
 import dbConnect, { collectionNamesObj } from '@/lib/dbConnect';
 import Image from 'next/image'
+import Link from 'next/link';
 import React from 'react'
 import { GrFormNextLink } from "react-icons/gr";
 
@@ -27,7 +28,9 @@ export default async function ServicesSection() {
                                         <h2 className='text-2xl font-bold my-5'>{item.title}</h2>
                                         <div className='flex items-center justify-between'>
                                             <p className='text-xl font-bold text-red-600'>Price: ${item.price}</p>
-                                            <GrFormNextLink size={30} className='text-red-600' />
+                                            <Link href={`/services/${item._id}`}>
+                                                <GrFormNextLink size={30} className='text-red-600' />
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
