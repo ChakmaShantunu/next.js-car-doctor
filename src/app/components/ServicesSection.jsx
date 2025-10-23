@@ -1,4 +1,4 @@
-import dbConnect from '@/lib/dbConnect';
+import dbConnect, { collectionNamesObj } from '@/lib/dbConnect';
 import Image from 'next/image'
 import React from 'react'
 import { GrFormNextLink } from "react-icons/gr";
@@ -6,12 +6,12 @@ import { GrFormNextLink } from "react-icons/gr";
 export default async function ServicesSection() {
 
     // const res = await fetch("/services.json")
-    const serviceCollection = dbConnect("test_services");
+    const serviceCollection = dbConnect(collectionNamesObj.servicesCollection);
     const data = await serviceCollection.find({}).toArray();
-    
+
 
     return (
-        <div>
+        <div className='my-12'>
             <div className='text-center space-y-5 my-6'>
                 <h1 className='text-5xl font-bold'>Our Service Area</h1>
                 <p className='text-gray-400'>the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
