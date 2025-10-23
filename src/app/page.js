@@ -3,7 +3,7 @@ import ServicesSection from "./components/ServicesSection";
 
 export default function Home() {
   return (
-    <div>
+    <div className="max-w-7xl mx-auto">
       <ServicesSection></ServicesSection>
     </div>
   );
