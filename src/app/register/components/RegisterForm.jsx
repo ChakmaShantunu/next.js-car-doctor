@@ -4,14 +4,14 @@ import React from 'react'
 
 export default function RegisterForm() {
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const form = e.target;
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
         const payeload = { name, email, password }
-        registerUser(payeload);
+        await registerUser(payeload);
     }
     return (
         <div>
