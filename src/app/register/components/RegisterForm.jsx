@@ -1,9 +1,20 @@
+"use client"
 import React from 'react'
 
 export default function RegisterForm() {
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        const payeload = { name, email, password }
+        console.log(payeload);
+    }
     return (
         <div>
-            <form className="fieldset space-y-2 py-4">
+            <form onSubmit={handleSubmit} className="fieldset space-y-2 py-4">
                 <label className="label text-black">Name</label>
                 <input type="text" name='name' className="input" placeholder="Your Name" />
                 <label className="label text-black">Email</label>
