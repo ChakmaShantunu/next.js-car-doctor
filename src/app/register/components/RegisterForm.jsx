@@ -1,4 +1,5 @@
 "use client"
+import { registerUser } from '@/app/actions/auth/registerUser';
 import React from 'react'
 
 export default function RegisterForm() {
@@ -10,7 +11,7 @@ export default function RegisterForm() {
         const email = form.email.value;
         const password = form.password.value;
         const payeload = { name, email, password }
-        console.log(payeload);
+        registerUser(payeload);
     }
     return (
         <div>
