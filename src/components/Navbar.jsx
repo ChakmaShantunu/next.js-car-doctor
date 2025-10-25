@@ -40,7 +40,9 @@ export default function Navbar() {
                     {links}
                 </ul>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end space-x-4">
+                <Link href={'/register'} className='btn btn-outline'>Register</Link>
+                <Link href={'/register'} className='btn btn-outline'>Login</Link>
                 <a className="btn btn-outline">Appointment</a>
             </div>
         </div>
