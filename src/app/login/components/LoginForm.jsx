@@ -1,5 +1,6 @@
 "use client"
 import { registerUser } from '@/app/actions/auth/registerUser';
+import { signIn } from "next-auth/react"
 import React from 'react'
 
 export default function LoginForm() {
@@ -10,7 +11,8 @@ export default function LoginForm() {
         const email = form.email.value;
         const password = form.password.value;
         const payeload = { email, password }
-        await registerUser(payeload);
+        console.log(payeload);
+        await signIn("credentials", payeload)
     }
     return (
         <div>
