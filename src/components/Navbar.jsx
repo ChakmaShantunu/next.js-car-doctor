@@ -42,7 +42,7 @@ export default function Navbar() {
             </div>
             <div className="navbar-end space-x-4">
                 <Link href={'/register'} className='btn btn-outline'>Register</Link>
-                <Link href={'/register'} className='btn btn-outline'>Login</Link>
+                <Link href={'/login'} className='btn btn-outline'>Login</Link>
                 <a className="btn btn-outline">Appointment</a>
             </div>
         </div>
