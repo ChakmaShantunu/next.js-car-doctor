@@ -5,14 +5,23 @@ import React from 'react'
 
 export default function LoginForm() {
 
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        const payeload = { email, password }
-        console.log(payeload);
-        await signIn("credentials", payeload)
+        // const payeload = { email, password }
+        // console.log(payeload);
+        try {
+            const result = await signIn("credentials", { redirect: true, email, password, callbackUrl: "/" });
+            console.log(result);
+            // router.push("/")
+        } catch (error) {
+            console.log(error);
+            alert("Authentication Failed");
+        }
+
     }
     return (
         <div>
